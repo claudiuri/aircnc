@@ -19,7 +19,7 @@ module.exports = {
         const user = await User.findById(user_id);
         
         if(!user){
-            return res.statu(400).json({ error: "Usuário não existe" });
+            return res.status(400).json({ error: "Usuário não existe" });
         }
 
         const spot = await Spot.create({
